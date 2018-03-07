@@ -1,0 +1,442 @@
+    1  cd
+    2  ls
+    3  ls
+    4  wget https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest
+    5  ls
+    6  rm -rvf download.cgi\?dist\=el 
+    7  ls
+    8  wget https://s3.amazonaws.com/pe-builds/released/2017.3.4/puppet-enterprise-2017.3.4-el-7-x86_64.tar.gz
+    9  ls
+   10  ls
+   11  tar -xvf puppet-enterprise-2017.3.4-el-7-x86_64.tar.gz 
+   12  ls
+   13  cd puppet-enterprise-2017.3.4-el-7-x86_64/
+   14  ls
+   15  ls
+   16  cd
+   17  ls
+   18  cd -
+   19  ls
+   20  cd conf.d/
+   21  ls
+   22  cat pe.conf
+   23  cd
+   24  ls
+   25  cd /home/
+   26  ls
+   27  cd ..
+   28  ls
+   29  cd
+   30  ls
+   31  ls
+   32  ls
+   33  cd
+   34  ls
+   35  yum -y localinstall https://fedorapeople.org/groups/katello/releases/yum/3.5/katello/el7/x86_64/katello-repos-latest.rpm
+   36  yum -y localinstall https://yum.theforeman.org/releases/1.16/el7/x86_64/foreman-release.rpm
+   37  yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   38  yum -y install foreman-release-scl python-django
+   39  yum -y update
+   40  yum -y install katello
+   41  yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+   42  yum -y install katello
+   43  yum install katello
+   44  yum install foreman-installer-katello
+   45  foreman-installer --scenario katello --help
+   46  ls
+   47  ls
+   48  rpm -qa|grep puppet
+   49  ls
+   50  ls
+   51  ls
+   52  ls
+   53  foreman-installer --scenario katello --help
+   54  foreman-installer --scenario katello --help|grep puppet
+   55  ls
+   56  ls
+   57  vim /etc/hostname 
+   58  ls
+   59  cat /etc/sysconfig/network
+   60  ls
+   61  ls
+   62  ls
+   63  ls
+   64  cat /etc/host
+   65  cat /etc/hosts
+   66  cat /etc/resolv.conf 
+   67  ls
+   68  ls
+   69  ls
+   70  ls
+   71  ls
+   72  ls
+   73  ls
+   74  ls
+   75  ls
+   76  ls
+   77  init 6
+   78  ls
+   79  hostname
+   80  ls
+   81  cd
+   82  ls
+   83  ls
+   84  hostname -f
+   85  ls
+   86  rpm -qa|grep katello
+   87  ls
+   88  ls
+   89  ls
+   90  foreman-installer --scenario katello --help|grep puppet
+   91  cd /etc/foreman-installer/scenarios.d/
+   92  ls
+   93  ls
+   94  vim katello-answers.yaml 
+   95  vim katello-answers.yaml 
+   96  ls
+   97  grep -iR puppet (
+   98  grep -iR puppet *
+   99  vim foreman-answers.yaml 
+  100  vim foreman-proxy-content-answers.yaml 
+  101  vim foreman-proxy-content.yaml 
+  102  ls
+  103  foreman-installer --scenario katello --help|grep puppet
+  104  foreman-installer --scenario katello --help|grep foreman-proxy-content-puppet
+  105  foreman-installer --scenario katello --help|grep foreman-proxy-puppetca 
+  106  foreman-installer --scenario katello --help|grep puppet-server-ca
+  107  foreman-installer --scenario katello --help|grep server-ca
+  108  foreman-installer --scenario katello --help|grep puppet-server-foreman-url
+  109  foreman-installer --scenario katello --help|grep puppet
+  110  foreman-installer --scenario katello --foreman-proxy-puppet false --foreman-proxy-puppetca false 
+  111  less /var/log/foreman-installer/katello.log
+  112  cd /var/log/foreman-installer/
+  113  ls
+  114  ls
+  115  ll
+  116  ll -l
+  117  ll -h
+  118  tailf katello.log
+  119  tail -n100 katello.log
+  120  tail -n200 katello.log
+  121  less katello.log
+  122  foreman-installer --scenario katello --foreman-proxy-puppet=false --foreman-proxy-puppetca=false 
+  123  ls
+  124  grep -iR puppet /etc/foreman-installer/scenarios.d/* |grep url
+  125  vim /etc/foreman-installer/scenarios.d/katello-answers.yaml 
+  126  katello-remove 
+  127  ls
+  128  cd
+  129  ls
+  130  ls
+  131  locate foreman
+  132  cd /etc/yum.repos.d/
+  133  ls
+  134  updatedb 
+  135  locate foreman
+  136  ls
+  137  cd
+  138  ls
+  139  cd puppet-enterprise-2017.3.4-el-7-x86_64/
+  140  ls
+  141  ls
+  142  cd
+  143  ls
+  144  yum -y localinstall https://fedorapeople.org/groups/katello/releases/yum/3.5/katello/el7/x86_64/katello-repos-latest.rpm
+  145  yum -y localinstall https://yum.theforeman.org/releases/1.16/el7/x86_64/foreman-release.rpm
+  146  rpm -qa|grep puppet
+  147  yum -y localinstall https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+  148  yum -y localinstall https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  149  yum -y install foreman-release-scl python-django
+  150  yum -y install katello
+  151  ls
+  152  less katello-answers.yaml.rpmsave 
+  153  less katello-answers.yaml.rpmsave 
+  154  ls
+  155  cd
+  156  ls
+  157  ls
+  158  cdl
+  159  ls
+  160  cd
+  161  ls
+  162  ls
+  163  yum install foreman-installer-katello
+  164  ls
+  165  rpm -ql katello-installer | grep params.pp
+  166  yum search katello-installer
+  167  yum install katello-installer-base.noarch
+  168  rpm -ql katello-installer
+  169  rpm -ql katello-installer-base 
+  170  rpm -ql katello-installer-base | grep params.pp
+  171  vim /usr/share/katello-installer-base/modules/katello/manifests/params.pp 
+  172  updatedb
+  173  locate answers.katello-installer.yaml
+  174  locate katello-installer.yaml
+  175  locate katello-instal
+  176  locate katello-installer
+  177  cd/usr/share/katello-installer-base/
+  178  cd /usr/share/katello-installer-base/p
+  179  cd /usr/share/katello-installer-base/
+  180  ls
+  181  find ./ -name *.yaml
+  182  less ./parser_cache/katello.yaml
+  183  rpm -qa|grep katello
+  184  locate katello-answers.yaml
+  185  ls
+  186  less /etc/foreman-installer/scenarios.d/katello-answers.yaml 
+  187  ls
+  188  cd /home/puppet-enterprise/
+  189  ls
+  190  less katello-answers.yaml.rpmsave 
+  191  ls
+  192  vim katello.yaml.rpmsave 
+  193  cd
+  194  ls
+  195  ls
+  196  cd /home/puppet-enterprise/
+  197  ls
+  198  cat katello-answers.yaml.rpmsave 
+  199  ls
+  200  cp -rvf katello-answers.yaml.rpmsave katello-answers.yaml-backup
+  201  ls
+  202  vim katello-answers.yaml.rpmsave
+  203  ls
+  204  ping puppet-enterprise.ucvvnkrjugberain3szcz4jdsa.rx.internal.cloudapp.net
+  205  ls
+  206  ls
+  207  cd
+  208  cd -
+  209  ls
+  210  cp -rvf katello-answers.yaml.rpmsave /etc/foreman-installer/scenarios.d/katello-answers.yaml 
+  211  ls
+  212  ls
+  213  ls
+  214  foreman-installer --scenario katello --foreman-proxy-puppet=false --foreman-proxy-puppetca=false 
+  215  ls
+  216  foreman-installer --scenario katello --foreman-proxy-puppet=false
+  217  foreman-installer --scenario katello
+  218  ls
+  219  cd /etc/foreman-installer/scenarios.d/
+  220  ls
+  221  ll
+  222  vim katello.yaml 
+  223  ls
+  224  ls
+  225  vim katello-answers.yaml 
+  226  vim katello-answers.yaml 
+  227  ls
+  228  foreman-installer --scenario katello
+  229  ls
+  230  vim katello-answers.yaml 
+  231  foreman-installer --scenario katello
+  232  FOREMAN_PROXY=puppet-enterprise.ucvvnkrjugberain3szcz4jdsa.rx.internal.cloudapp.net
+  233  foreman-proxy-certs-generate --foreman-proxy-fqdn "$FOREMAN_PROXY" --certs-tar "/root/$FOREMAN_PROXY-certs.tar"
+  234  cd
+  235  ls
+  236  cd ssl-build/
+  237  ls
+  238  cd puppet-enterprise.ucvvnkrjugberain3szcz4jdsa.rx.internal.cloudapp.net/
+  239  ls
+  240  cat latest.txt 
+  241  cat latest.txt 
+  242  cd ..
+  243  ls
+  244  cd ..
+  245  ls
+  246  foreman-proxy-certs-generate --foreman-proxy-fqdn "$FOREMAN_PROXY" --certs-tar "/root/$FOREMAN_PROXY-certs.tar"
+  247  foreman-proxy-certs-generate --foreman-proxy-fqdn "$FOREMAN_PROXY" --certs-tar "/root/$FOREMAN_PROXY-certs.tar" --set-email="papinder.s@hcl.com"
+  248  foreman-proxy-certs-generate --help
+  249  ls
+  250  cd /etc/puppetlabs/puppet/ssl/
+  251  ls
+  252  ls
+  253  pwd
+  254  ls
+  255  cd ..
+  256  ls
+  257  yum install rsync
+  258  rsync -Pvr ssl 10.0.0.4:/etc/puppetlabs/puppet/
+  259  cd
+  260  ls
+  261  cd .ssh/
+  262  ls
+  263  touch authorized_keys
+  264  vim authorized_keys 
+  265  ifconfig 
+  266  cd
+  267  ls
+  268  ls
+  269  katello-service status
+  270  cat /etc/foreman-installer/scenarios.d/katello-answers.yaml 
+  271  cat /etc/foreman-installer/scenarios.d/katello-answers.yaml |grep password
+  272  cd /etc/pki/katello-certs-tools/certs/
+  273  ls
+  274  ls
+  275  ls |grep -puppet-client.crt
+  276  ls |grep puppet-client.crt
+  277  scp satellite.ucvvnkrjugberain3szcz4jdsa.rx.internal.cloudapp.net-puppet-client.crt 10.0.0.4:/etc/puppetlabs/puppet/foreman/
+  278  scp satellite.ucvvnkrjugberain3szcz4jdsa.rx.internal.cloudapp.net-puppet-client.crt 10.0.0.4:/tmp/
+  279  ssh 10.0.0.4
+  280  ifconfig 
+  281  ls
+  282  ls |grep puppet-client.crt
+  283  pwd
+  284  ifconfig 
+  285  ls
+  286  ls
+  287  cd ../private/
+  288  ls
+  289  ls |grep puppet-client.crt
+  290  ls |grep puppet-client
+  291  pwd
+  292  locate foreman.rb
+  293  hostname -f
+  294  tailf /var/log/foreman/production.log 
+  295  ls
+  296  cd
+  297  ls
+  298  ls
+  299  ls
+  300  tailf /var/log/foreman/production.log 
+  301  cd /var/lib/pulp
+  302  s
+  303  ls
+  304  df -h
+  305  ls
+  306  ls
+  307  cd
+  308  ls
+  309  ls
+  310  cd /etc/foreman-installer/scenarios.d/
+  311  ls
+  312  vim katello-answers.yaml 
+  313  foreman-installer --scenario katello
+  314  ls
+  315  ls
+  316  vim katello.yaml 
+  317  ls
+  318  rm -rvf katello-answers.yaml 
+  319  ls
+  320  ls
+  321  locate foreman-installer
+  322  locate foreman-installer.yaml
+  323  locate foreman-installer.yml
+  324  locate foreman-installer
+  325  locate katello-answers.yaml 
+  326  ls
+  327  updatedb 
+  328  ls
+  329  locate katello-answers.yaml 
+  330  cat /home/puppet-enterprise/katello-answers.yaml.rpmsave
+  331  ls
+  332  ls
+  333  cat /home/puppet-enterprise/katello-answers.yaml-backup 
+  334  vim katello-answers.yaml 
+  335  cd /etc/pki/katello/puppet/
+  336  ls
+  337  cd -
+  338  ls
+  339  ls
+  340  ls
+  341  foreman-installer --scenario katello
+  342  ls
+  343  pwd
+  344  vim katello-answers.yaml 
+  345  foreman-installer --scenario katello
+  346  tailf /var/log/foreman/production.log 
+  347  df -h
+  348  ls
+  349  ls
+  350  cd
+  351  ls
+  352  cd /usr
+  353  ls
+  354  cd
+  355  user
+  356  users
+  357  ls
+  358  cd /etc/pki/katello-certs-tools/
+  359  ls
+  360  cd certs/
+  361  ls
+  362  ls |grep client
+  363  ls
+  364  cd /etc/httpd/conf.d/
+  365  ls
+  366  grep -iR puppet *
+  367  ls
+  368  ls
+  369  cd
+  370  ls
+  371  ls
+  372  cd
+  373  ls
+  374  cd ssl-build/
+  375  ls
+  376  hostname -f |wc
+  377  cd satellite.ucvvnkrjugberain3szcz4jdsa.rx.internal.cloudapp.net/
+  378  ls
+  379  ls
+  380  ls
+  381  cd
+  382  ls
+  383  ls
+  384  ls -a
+  385  cd .ssh/
+  386  ls
+  387  ssh-keygen 
+  388  ls
+  389  rm -rvf id_rsa*
+  390  ls
+  391  ls
+  392  vim authorized_keys 
+  393  ls
+  394  ifconfig 
+  395  ls
+  396  cd
+  397  ls
+  398  ls
+  399  ll
+  400  vim .ssh/authorized_keys 
+  401  iptables -L
+  402  ls
+  403  cd
+  404  ls
+  405  ls
+  406  ifconfig 
+  407  iptables -L
+  408  hostname -f
+  409  ping 10.0.1.4
+  410  ifconfig 
+  411  route -n
+  412  ifconfig 
+  413  vim .ssh/authorized_keys 
+  414  ls
+  415  ls
+  416  ls
+  417  cd 
+  418  ls
+  419  tailf /var/log/foreman/production.log 
+  420  tailf /var/log/foreman/production.log 
+  421  hostname -f
+  422  ip addr
+  423  history
+  424  ip addr
+  425  ls
+  426  cd
+  427  ls
+  428  ls
+  429  tailf /var/log/foreman/production.log
+  430  cd
+  431  hostname -f
+  432  ifconfig 
+  433  iptables -L
+  434  tailf /var/log/foreman/production.log
+  435  cd
+  436  ls
+  437  tailf /var/log/foreman/production.log
+  438  puppet resource package subscription-manager
+  439  puppet resource package puppet
+  440  tailf /var/log/foreman/production.log
+  441  ls
+  442  history > history
