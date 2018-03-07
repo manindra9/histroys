@@ -1,4 +1,6 @@
-    1  cd
+https://theforeman.org/manuals/1.6/#3.5.4PuppetReports   
+   
+   1  cd
     2  ls
     3  ls
     4  wget https://pm.puppetlabs.com/cgi-bin/download.cgi?dist=el&rel=7&arch=x86_64&ver=latest
